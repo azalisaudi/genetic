@@ -35,7 +35,7 @@ public class Genetic {
             ge.selection();
 
             // CROSSOVER
-            ge.crossover(crossOverPoint);
+            ge.crossover();
 
             // MUTATION
             if (rn.nextDouble() < MUTATION_RATE) {
