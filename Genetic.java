@@ -35,7 +35,6 @@ public class Genetic {
             ge.selection();
 
             // CROSSOVER
-			int crossOverPoint = rn.nextInt(population.individuals[0].geneLength); // Select a random crossover point
             ge.crossover(crossOverPoint);
 
             // MUTATION
@@ -77,7 +76,12 @@ public class Genetic {
     }
 
     //Crossover
-    void crossover(crossOverPoint) {
+    void crossover() {
+	Random rn = new Random();
+		
+	// Select a random crossover point
+	int crossOverPoint = rn.nextInt(population.individuals[0].geneLength);
+	    
         //Swap values among parents
         for (int i = 0; i < crossOverPoint; i++) {
             int temp = fittest.genes[i];
